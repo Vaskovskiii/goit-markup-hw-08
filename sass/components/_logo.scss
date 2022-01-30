@@ -1,0 +1,15 @@
+.logo {
+  @include font (26px, 1.19, 700, 0.03em);
+  color: var(--blue-text-colour);
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  margin-right: 93px;
+}
+
+.logo_header {
+  color: #303030;
+}
+
+.logo_footer {
+  color: #FFFFFF;
+}

@@ -1,0 +1,51 @@
+.grade {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.grade__list {
+  //display: flex;
+}
+
+.grade__item {
+  //width: 270px;
+  //&:not(:last-child) {
+  // margin-right: 30px;
+  // }
+}
+
+.grade__title {
+  @include font(14px, 1.14, 700, 0.03em);
+  //font-size: 14px;
+  //line-height: 16px;
+  //letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+
+  color: #212121;
+}
+
+.grade__aft-title {
+  @include font(14px, 1.72, 400, 0.03em);
+  //font-size: 14px;
+  //line-height: (24px/14px);
+  //letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.grade__container {
+  background-color: #f5f4fa;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.grade__social-item {
+  @extend %align-list;
+}
+
+.grade__social-icon {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
