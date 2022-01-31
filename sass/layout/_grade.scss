@@ -1,29 +1,49 @@
 .grade {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .grade__list {
-  //display: flex;
+  //@extend %align-list;
+  margin: -15px;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .grade__item {
-  //width: 270px;
-  //&:not(:last-child) {
-  // margin-right: 30px;
-  // }
+  margin: 15px;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 120px) / 4);
+  }
 }
 
 .grade__title {
+  margin-bottom: 10px;
   @include font(14px, 1.14, 700, 0.03em);
+  text-transform: uppercase;
+  text-align: center;
+  color: #212121;
   //font-size: 14px;
   //line-height: 16px;
   //letter-spacing: 0.03em;
-  text-transform: uppercase;
-
-  margin-bottom: 10px;
-
-  color: #212121;
+  @media screen and (min-width: 1200px) {
+    @include font(14px, 1.17, 700, 0.03em);
+    text-align: start;
+  }
 }
 
 .grade__aft-title {
@@ -32,20 +52,16 @@
   //line-height: (24px/14px);
   //letter-spacing: 0.03em;
   color: #757575;
+  text-align: start;
 }
 
 .grade__container {
-  background-color: #f5f4fa;
-  width: 270px;
-  height: 120px;
+  text-align: center;
+  border-radius: 4px;
+
   margin-bottom: 30px;
-}
+  padding-top: 25px;
+  padding-bottom: 25px;
 
-.grade__social-item {
-  @extend %align-list;
-}
-
-.grade__social-icon {
-  margin-bottom: 25px;
-  margin-top: 25px;
+  background-color: #f5f4fa;
 }

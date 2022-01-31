@@ -1,15 +1,51 @@
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.clients__title {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 30px;
+  @include font(36px, 1.16, 700, 0.03em);
+  font-style: normal;
+  color: #212121;
+  //font-weight: bold;
+  //font-size: 36px;
+  //line-height: (42px/36px);
+  //letter-spacing: 0.03em;//
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+.clients__social-list {
+  margin: -15px;
+  @extend %align-list;
+  margin: 0 auto;
+  padding: 0px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .clients__social-item {
-  width: 170px;
+  width: calc((100% - 60px) / 2);
   height: 92px;
-  & + & {
-    margin-left: 30px;
-    }
+  margin: 15px;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 90px) / 3);
   }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 180px) / 6);
+  }
+}
 
 .clients__social-link {
   width: 100%;
@@ -27,43 +63,16 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
+    fill: currentColor;
+    border-color: var(--blue-text-colour);
+  }
+  &:hover .clients-social-icon &:focus .clients-social-icon {
+    fill: var(--blue-text-colour);
+  }
+}
+
+.clients-social-icon {
+  width: 106px;
+  height: 60px;
   fill: currentColor;
-  border-color: var(--blue-text-colour);
 }
-&:hover .clients-social-icon
-&:focus .clients-social-icon {
-  fill: var(--blue-text-colour);
-}
-}
-
-
-
-
-
-.clients__social-list{
-  display: flex;
-  justify-content: space-between;
-
-}
-
-.clients__title {
-@include font (36px, 1.16, 700, 0.03em);
-font-style: normal;
-//font-weight: bold;
-//font-size: 36px;
-//line-height: (42px/36px);
-//letter-spacing: 0.03em;//
-text-align: center;
-margin-bottom: 50px;
-
-color: #212121;
-  
-}
-
-.clients__social-conteiner {
-  width: 170px;
-  height: 92px;
-  transition: color 250ms;
-}
-
-
