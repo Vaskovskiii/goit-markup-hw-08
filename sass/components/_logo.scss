@@ -1,8 +1,6 @@
 .logo {
-  @include font(26px, 1.19, 700, 0.03em);
-  color: var(--blue-text-colour);
-  font-family: 'Raleway', sans-serif;
-  text-decoration: none;
+  color: #212121;
+  @include font('Raleway', normal, 700, 24px, 1.17, 0.03em);
   @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.19;
@@ -19,7 +17,7 @@
   }
 }
 
-.logo__web {
+.logo__img {
   display: inline-block;
   color: #2196f3;
 }
@@ -29,6 +27,6 @@
   margin-bottom: 20px;
 }
 
-.logo__studio {
+.logo__text--footer {
   color: #ffffff;
 }

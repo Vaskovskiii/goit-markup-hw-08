@@ -1,52 +1,47 @@
 .whatdo {
-  margin-bottom: 94px;
-}
+  &__box {
+    padding-bottom: 94px;
+  }
+  &__title {
+    margin-bottom: 50px;
 
-.whatdo__item:not(:last-child) {
-margin-right: 30px;
-}
+    text-align: center;
+    @include font('Roboto', normal, 700, 36px, 1.17, 0.03em);
+    color: #212121;
+  }
 
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: contents;
+  }
+}
 .whatdo__list {
-  display: flex;
-  justify-content: space-between;
+  @extend %list;
+  @extend %middleflex;
 }
 
-.whatdo__title {
-  @include font (36px, 1.17, 700, 0.03em);
-  //font-size: 36px;
-  //line-height: (42px/36px);
-  //letter-spacing: 0.03em;
-  text-align: center;
-  
-
-  margin-bottom: 50px;
-  
-  color: #212121;
+.whatdo__item + .whatdo__item {
+  margin-left: 30px;
 }
 
-.whatdo__item-wrap {
+.whatdo__wrap {
   position: relative;
 }
+.whatdo__image {
+  width: 370px;
+}
 
-.whatdo__add-text {
-  @include font (14px, 1.14, 700);
-//font-weight: bold;
-//font-size: 14px;
-//line-height: 16px;
-//letter-spacing: 0.03em;
-position: absolute;
-bottom: 0;
-width: 100%;
-height: 19%;
-text-align: center;
-text-transform: uppercase;
+.whatdo__description {
+  position: absolute;
+  bottom: 0;
 
-padding-top: 27px;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
 
-
-display: flex;
-justify-content: center;
-
-background: rgba(47, 48, 58, 0.8);
-color: #FFFFFF;
+  text-align: center;
+  @include font('Roboto', normal, 700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
 }

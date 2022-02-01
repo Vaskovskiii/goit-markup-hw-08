@@ -8,19 +8,16 @@
     padding-bottom: 94px;
   }
 }
-
 .grade__list {
-  //@extend %align-list;
+  @extend %list;
   margin: -15px;
 
   @media screen and (min-width: 768px) {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 }
-
 .grade__item {
   margin: 15px;
   @media screen and (min-width: 768px) {
@@ -31,37 +28,36 @@
   }
 }
 
-.grade__title {
-  margin-bottom: 10px;
-  @include font(14px, 1.14, 700, 0.03em);
-  text-transform: uppercase;
-  text-align: center;
-  color: #212121;
-  //font-size: 14px;
-  //line-height: 16px;
-  //letter-spacing: 0.03em;
-  @media screen and (min-width: 1200px) {
-    @include font(14px, 1.17, 700, 0.03em);
-    text-align: start;
-  }
-}
-
-.grade__aft-title {
-  @include font(14px, 1.72, 400, 0.03em);
-  //font-size: 14px;
-  //line-height: (24px/14px);
-  //letter-spacing: 0.03em;
-  color: #757575;
-  text-align: start;
-}
-
-.grade__container {
-  text-align: center;
-  border-radius: 4px;
-
+.grade__wrap {
   margin-bottom: 30px;
   padding-top: 25px;
   padding-bottom: 25px;
 
+  text-align: center;
   background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.grade__title {
+  margin-bottom: 10px;
+
+  @include font('Roboto', normal, 700, 14px, 1.14, 0.03em);
+  text-align: center;
+  text-transform: uppercase;
+  color: #212121;
+
+  @media screen and (min-width: 767px) {
+    text-align: start;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font('Roboto', normal, 700, 14px, 1.17, 0.03em);
+    text-align: start;
+  }
+}
+
+.grade__desctiption {
+  @include font('Roboto', normal, 400, 14px, 1.71, 0.03em);
+  text-align: start;
+  color: #757575;
 }

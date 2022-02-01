@@ -1,23 +1,22 @@
-@import "base/reset";
-@import "utils/vars";
-@import "base/common";
+@import './utils/reset';
+@import './utils/variables';
+@import './utils/utils';
 
+@import './utils/placeholders';
+@import './utils/mixin';
 
+@import './components/logo';
+@import './components/navigation';
+@import './components/social';
+@import './components/buttons';
 
-@import "utils/placeholders";
-@import "utils/mixins";
-@import "components/container";
+@import './layout/header';
+@import './layout/solution';
+@import './layout/grade';
+@import './layout/whatdo';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/portfolio';
+@import './layout/footer';
 
-@import "components/logo";
-@import "components/navigation";
-
-@import "layout/header";
-@import "layout/solution";
-@import "layout/grade";
-@import "layout/whatdo";
-@import "layout/team";
-@import "layout/clients";
-@import "layout/portfolio";
-@import "layout/footer";
-
-@import "components/modal"; 
+@import './components/modal';

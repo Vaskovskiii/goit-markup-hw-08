@@ -1,0 +1,17 @@
+.main-btn {
+  @extend %middleflex;
+  margin: 0 auto;
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 10px 32px;
+
+  @include font('Roboto', normal, 700, 16px, 1.88, 0.06em);
+  background-color: #2196f3;
+  color: #ffffff;
+  cursor: pointer;
+
+  border: none;
+}
+.subscribe__btn {
+  padding-right: 62px;
+}
